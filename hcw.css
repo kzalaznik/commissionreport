@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1 {
+	font-weight: bold;
+	font-style: italic;
+	color: #004270;
+}
+
+h2 {
+	font-weight: bold;
+	font-style: italic;
+	color: #498AC7;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+a {
+	color: #498AC7;
+	text-decoration: none;
+}
+
+.page-title {
+	border-bottom: 1px solid #efefef;
+}
+
+.bg-hcw {
+	background-color: #004270;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15), inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+.bg-light-blue {
+	background-color: #EBF6FF;
+}
+.navbar {
+	padding: 1rem 1rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+.navbar-brand img {
+	margin-right:1rem;
+}
+
+.nav-tabs .nav-link.active {
+	color: #004270;
+	font-weight: bold;
+}
+
+.main {
+	padding: 3rem 1rem 1.5rem 1rem;
+}
+
+.divide {
+	padding: 1rem 0rem;
+	border-bottom: 1px solid #efefef;
+}
+
+.card {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.075);
+}
+
+.form-check {
+	padding-left: 1.5rem;
+}
+
+.form-check-padding {
+	padding-left:0rem;
+}
+
+.form-control-sm {
+	border: 1px solid #ced4da;
+}
+
+.page-link {
+	color: #498AC7;
+}
+
+.btn-primary {
+	background-color: #13A085;
+	border: 0px;
+}
+
+.btn-primary:hover {
+	background-color: #498AC7;
+}
+
+.list-group-item {
+	border: 0px;
+}
+
+.tab-pane {
+	padding: 2rem;
+}
+
+.table-blue {
+	background-color: #498AC7;
+	color: #fff;
+}
+
+.footer-margin {
+	margin-top: 7rem;
+}
+
+.footer {
+	padding: 1.5rem 0rem;
+	font-size: 14px;
+}
+
+.footer img {
+	max-width: 150px;
+}
+
+@media (max-width: 767px) {
+	.fixed-bottom {
+		position: static !important;
+	}
+}

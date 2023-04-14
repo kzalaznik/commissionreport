@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Commission Report</title>
+		<!-- Link to Bootstrap CSS file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	    <!-- Bootstrap Font Icon CSS -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<!-- Link to HCW CSS file -->
+		<link rel="stylesheet" href="hcw.css">
+		<!-- Link to jQuery and Bootstrap JS files -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>	
+		<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-hcw">
+		  <div class="container">
+			<a class="navbar-brand" href="Index.html">
+			  <img src="https://www.hoffmancarwash.com/wp-content/uploads/2023/04/HCW-White-Swirl.png" alt="Your Logo" width="30" class="d-inline-block align-middle me-2">
+			  Operations
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="Index.html">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="Bonus Report.html">Bonus Report</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="Greeter Swipe Report.html">Greeter Swipe Report</a>
+				</li>
+				  <li class="nav-item">
+				  <a class="nav-link" data-toggle="modal" data-target="#ReportSettings">Report Settings</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="System Settings">System Settings</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+			
+		<div class="container main">
+			<h1 class="page-title">Bonus Report</h1>
+		</div>
+		<div class="container">
+			<h2>Set Your Criteria</h2>
+			  <form>
+				<div class="col-sm-6">
+					<div class="form-group" style="padding-top: 2rem;">
+					  <label for="start-date">Start Date:</label>
+					  <input type="date" class="form-control" id="start-date" name="start-date">
+					</div>
+					<div class="form-group">
+					  <label for="end-date">End Date:</label>
+					  <input type="date" class="form-control" id="end-date" name="end-date">
+					</div>
+					<div class="form-group">
+					  <label for="filter">Select Location:</label>
+					  <select class="form-control" id="filter" name="filter">
+						<option value="">Location</option>
+						<option value="filter1">Filter 1</option>
+						<option value="filter2">Filter 2</option>
+						<option value="filter3">Filter 3</option>
+					  </select>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="reset" class="btn btn-secondary">Reset</button>
+				  </div>
+			  </form>		
+		</div>
+		<!-- Footer -->
+		<div class="footer-margin">
+			<footer class="footer bg-light-blue">
+			  <div class="container">
+			    <div class="row text-center">
+			      <div class="col-12 col-md-6 text-md-left">
+			        <img src="https://www.hoffmancarwash.com/wp-content/uploads/2018/08/Hoffman-Car-Wash-Logo-H150-300x99.png" alt="Hoffman Car wash Logo" class="img-fluid mx-auto">
+			      </div>
+			      <div class="col-12 col-md-6">
+			        <p class="text-muted mb-0 text-md-right">© 2023 Hoffman Car Wash. All rights reserved. <br>Need help? Email: <a href="mailto:ithelp@hoffman-development.com">ITHelp@hoffman-development.com</a></p>
+			      </div>
+			    </div>
+			  </div>
+			</footer>
+		</div>
+	</body>
+</html>

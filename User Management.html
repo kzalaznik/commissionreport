@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Management</title>
+		<!-- Link to Bootstrap CSS file -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	    <!-- Bootstrap Font Icon CSS -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<!-- Link to HCW CSS file -->
+		<link rel="stylesheet" href="hcw.css">
+		<!-- Link to jQuery and Bootstrap JS files -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>	
+		<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-hcw">
+		  <div class="container">
+			<a class="navbar-brand" href="Index.html">
+			  <img src="https://www.hoffmancarwash.com/wp-content/uploads/2023/04/HCW-White-Swirl.png" alt="Your Logo" width="30" class="d-inline-block align-middle me-2">
+			  Operations
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="Index.html">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="Bonus Report.html">Bonus Report</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="Greeter Swipe Report.html">Greeter Swipe Report</a>
+				</li>
+				  <li class="nav-item">
+				  <a class="nav-link" data-toggle="modal" data-target="#ReportSettings">Report Settings</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="System Settings">System Settings</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+			
+		<div class="container main">
+			<h1 class="page-title">User Management</h1>
+		</div>
+		<div class="container">
+			<h2>Manage or Add Accounts</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<select class="form-control mb-3">
+				  		<option>Last Name</option>
+				  		<option>Username</option>
+					</select>
+				</div>
+				<div class="col-sm-4">
+					<div class="input-group mb-3">
+				  		<input type="text" class="form-control" placeholder="Search...">
+					  	<div class="input-group-append">
+							<button class="btn btn-outline-secondary" type="button">Go</button>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="mb-3">
+				<button class="btn btn-primary mr-2">Search</button>
+				<button class="btn btn-secondary mr-2">Reset</button>
+				<button type="button" data-toggle="modal" data-target="#AddUser" class="btn btn-outline-dark">Add User</button>
+			</div>
+		</div>		
+		<!-- Modal -->
+		<div class="modal fade" id="AddUser" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="addUserModalLabel">Add User</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="firstName">First Name</label>
+								<input type="text" class="form-control" id="firstName" placeholder="">
+						  	</div>
+						  	<div class="form-group">
+								<label for="lastName">Last Name</label>
+								<input type="text" class="form-control" id="lastName" placeholder="">
+						  	</div>
+						  	<div class="form-group">
+								<label for="username">Username</label>
+								<input type="text" class="form-control" id="username" placeholder="">
+						  	</div>
+						  	<div class="form-group">
+								<label for="email">Email Address</label>
+								<input type="email" class="form-control" id="email" placeholder="">
+						  	</div>
+						  	<div class="form-group">
+								<label for="location">Select Location</label>
+								<select class="form-control" id="location">
+									<option>Location</option>
+								  	<option>New York</option>
+								  	<option>London</option>
+								  	<option>Paris</option>
+								  	<option>Tokyo</option>
+								</select>
+						  	</div>
+						  	<div class="form-group" style="padding-top: 1.5rem;">
+								<label for="interests">Please Select</label>
+								<div class="form-check">
+							  		<input class="form-check-input" type="checkbox" value="option1" id="checkbox1">
+							  		<label class="form-check-label" for="checkbox1">
+									Manager
+							  		</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="option2" id="checkbox2">
+									<label class="form-check-label" for="checkbox2">
+									Admin
+									</label>
+								</div>
+								<div class="form-check">
+							  		<input class="form-check-input" type="checkbox" value="option3" id="checkbox3">
+							  		<label class="form-check-label" for="checkbox3">
+									Confirmed
+							  		</label>
+								</div>
+						  	</div>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container main">
+			<h2 style="padding: 2rem 0rem;">Manage Accounts</h2>	
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+					  	<th>Edit</th>
+					  	<th>First Name</th>
+					  	<th>Last Name</th>
+					  	<th>Username</th>
+					  	<th>Mgmt</th>
+						<th>Admin</th>
+						<th>Confirmed</th>
+						<th>Location</th>
+					</tr>
+			  	</thead>
+			  	<tbody>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-pencil-square"></i> <i class="bi bi-trash"></i></td>
+						<td>Jane</td>
+						<td>Smith</td>
+						<td>jsmith</td>
+						<td><i class="bi bi-check"></i></td>
+						<td><i class="bi bi-x"></i></td>
+						<td><i class="bi bi-check"></i></td>
+						<td>Route 7</td>
+					</tr>
+			  </tbody>
+			</table>
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="btn-toolbar" role="toolbar">
+						<div class="btn-group mr-2" role="group">
+							<button type="button" class="btn btn-primary">Submit</button>
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-secondary">Reload</button>
+						</div>
+					</div>
+				</div>
+			
+			<div class="col-sm-6">
+				<nav aria-label="Page navigation example">
+				  <ul class="pagination justify-content-end">
+					<li class="page-item disabled">
+					  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item">
+					  <a class="page-link" href="#">Next</a>
+					</li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		</div>
+		<!-- Footer -->
+		<div class="footer-margin">
+			<footer class="footer bg-light-blue">
+			  <div class="container">
+				<div class="row text-center">
+				  <div class="col-12 col-md-6 text-md-left">
+					<img src="https://www.hoffmancarwash.com/wp-content/uploads/2018/08/Hoffman-Car-Wash-Logo-H150-300x99.png" alt="Hoffman Car wash Logo" class="img-fluid mx-auto">
+				  </div>
+				  <div class="col-12 col-md-6">
+					<p class="text-muted mb-0 text-md-right">© 2023 Hoffman Car Wash. All rights reserved. <br>Need help? Email: <a href="mailto:ithelp@hoffman-development.com">ITHelp@hoffman-development.com</a></p>
+				  </div>
+				</div>
+			  </div>
+			</footer>
+		</div>
+	</body>
+</html>
